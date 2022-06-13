@@ -1,0 +1,60 @@
+@mixin animateIt{
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease;
+}
+
+@mixin absoluteCenter{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+   transform: translate(-50%,-50%);
+}
+
+@mixin floatfix{
+  &::after{
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin textHover($bgcolor, $padding){
+  position: relative;
+  &::before{
+    content: "";
+    display: block;
+    width: 0;
+    height: .15rem;
+    background-color: $bgcolor;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    -webkit-transform: translateX(-50%, 0);
+    transform: translate(-50%, 0);
+    @include animateIt;
+  }
+  &:hover::before{
+    width: calc(100% - #{$padding*2});
+  }
+}
+
+@mixin line-anim-mixin($path-number, $offset){
+  @keyframes line-anim-#{$path-number} {
+    0% { stroke-dashoffset: $offset; }
+    50% { stroke-dashoffset: 0; }
+    100% { stroke-dashoffset: $offset; }
+  }
+}
+
+@keyframes animateGradient{
+  0%{
+    background-position: left bottom;
+  }
+  50%{
+    background-position: right top;
+  }
+  100%{
+    background-position: left bottom;
+  }
+}
