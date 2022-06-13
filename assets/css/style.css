@@ -2648,6 +2648,9 @@ body.loaded .preloader {
     color: #06ADB3;
     font-size: 1.6rem;
     margin-bottom: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .treasury_wallet .bold {
@@ -2723,10 +2726,22 @@ body.loaded .preloader {
     }
 }
 
+@media (max-width: 493px) {
+    .treasury .treasury_wallet {
+        flex-direction: column;
+    }
+
+    .treasury .treasury_wallet_address {
+        margin-left: 0 !important;
+    }
+}
+
 @media (max-width: 468px) {
     .treasury .total-amount {
         font-size: 30px;
     }
+
+   
 }
 
 .step {
