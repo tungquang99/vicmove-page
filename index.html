@@ -256,7 +256,7 @@
             <div class="container">
                 <h2 class="section-heading color-black">Commounity Treasury</h2>
                 <p class="treasury_wallet"  onclick="coppyAdd('0xcb3745379275252F4beB5d1094bF1a8A09F368b7')"><span class="bold">Treasury Wallet Address: </span><span class="ml-5 treasury_wallet_address">0xcb3 .... A09F368b7 <i class="fas fa-copy"></i></span></p>
-                <div class="row justify-content-center">
+                <!-- <div class="row justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-6">
                         <div class="growth__box binance" style="margin-bottom: 32px;">
                             <div class="content">
@@ -269,7 +269,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="row justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-6">
                         <div class="growth__box vim">
@@ -938,11 +938,11 @@
             }
             getBalance().then(result => {
                 let amount = currencyFormat(result);
-                $('.total-amount-bnb').html(amount);
-                convertBNBToUSDT('https://api.binance.com/api/v3/ticker/price?symbol=BNBUSDT', result);
-                setInterval(() => {
-                    convertBNBToUSDT('https://api.binance.com/api/v3/ticker/price?symbol=BNBUSDT', result);
-                }, 5000);
+                // $('.total-amount-bnb').html(amount);
+                // convertBNBToUSDT('https://api.binance.com/api/v3/ticker/price?symbol=BNBUSDT', result);
+                // setInterval(() => {
+                //     convertBNBToUSDT('https://api.binance.com/api/v3/ticker/price?symbol=BNBUSDT', result);
+                // }, 5000);
             })
 
             // Token
@@ -980,14 +980,14 @@
                 }, 5000);
             });
 
-            function convertBNBToUSDT(params, result) {
-                fetch(params)
-                .then(response => response.json())
-                .then(data => {
-                    const totalUSD = Number(data.price) * Number(result);
-                    $('.total-amount-bnb-usd').html(totalUSD.toFixed(3) + " USD")
-                });
-            }
+            // function convertBNBToUSDT(params, result) {
+            //     fetch(params)
+            //     .then(response => response.json())
+            //     .then(data => {
+            //         const totalUSD = Number(data.price) * Number(result);
+            //         $('.total-amount-bnb-usd').html(totalUSD.toFixed(3) + " USD")
+            //     });
+            // }
 
             function convertVIMToUSDT(api, params) {
                 fetch(api)
