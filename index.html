@@ -120,7 +120,7 @@
                                     <h6>GET IT ON <span>Google Play</span></h6>
                                 </div>
                             </a>
-                            <a href="#" class="apple-store">
+                            <a href="https://apps.apple.com/us/app/vicmove-adm/id1491310771" class="apple-store">
                                 <i class="fab fa-apple"></i>
                                 <div class="button-content">
                                     <h6>GET IT ON <span>Apple Store</span></h6>
@@ -866,7 +866,7 @@
                                         </h6>
                                     </div>
                                 </a>
-                                <a href="#" class="apple-store">
+                                <a href="https://apps.apple.com/us/app/vicmove-adm/id1491310771" class="apple-store">
                                     <i class="fab fa-apple"></i>
                                     <div class="button-content">
                                         <h6>
@@ -904,20 +904,6 @@
         $(".header__nav").on("click", () => {
             $(".header__nav").removeClass("shown");
             $(".header__nav").css("right", "100%");
-        })
-        $(".apple-store").on("click", () => {
-            Toastify({
-                text: "Comming soon",
-                duration: 3000,
-                close: true,
-                gravity: "top", // `top` or `bottom`
-                position: "left", // `left`, `center` or `right`
-                stopOnFocus: true, // Prevents dismissing of toast on hover
-                style: {
-                    background: "linear-gradient(to right, #00b09b, #96c93d)",
-                    fontSize: "20px"
-                },
-            }).showToast();
         })
         function coppyAdd(text) {
             navigator.clipboard.writeText(text);
