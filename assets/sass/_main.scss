@@ -1980,6 +1980,109 @@ pricing
   }
 }
 
+.treasury .section-heading {
+  margin-bottom: 2rem;
+}
+
+.treasury_wallet {
+  text-align: center;
+  color: #06ADB3;
+  font-size: 1.6rem;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.treasury_wallet .bold {
+  font-weight: bold;
+}
+
+.treasury .growth__box .content {
+  padding: 20px 40px !important;
+}
+
+.treasury .icon {
+  position: relative;
+  width: 10.9rem;
+  height: 10.9rem;
+  box-shadow: 0 2px 19px rgba(0, 0, 0, 0.7);
+}
+
+.treasury .icon .image-coins {
+  width: 126%;
+  height: 119%;
+  position: absolute;
+  top: 51%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+.treasury .vim h3 {
+  width: 100%;
+  text-align: right;
+}
+
+.treasury small {
+  font-size: 16px;
+  color: #06ADB3;
+  text-align: right;
+  display: block;
+  font-weight: 600;
+}
+
+.treasury h3 {
+  text-transform: uppercase;
+  color: #06ADB3;
+  font-weight: 300 !important;
+}
+
+.treasury .total-amount {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .treasury.growth .row>div .growth__box.binance .content::before {
+      left: initial;
+      right: -3.3rem;
+      transform: translateY(-50%) rotate(86deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .treasury .growth__box.binance  {
+     flex-direction: column-reverse;
+  }
+
+  .treasury .growth__box.binance .content::before {
+      left: 50% ;
+      transform: translateX(-50%);
+  }
+
+  .treasury small, .treasury .vim h3, .treasury .total-amount  {
+      text-align: center;
+  }
+}
+
+@media (max-width: 493px) {
+  .treasury .treasury_wallet {
+      flex-direction: column;
+  }
+
+  .treasury .treasury_wallet_address {
+      margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 468px) {
+  .treasury .total-amount {
+      font-size: 30px;
+  }
+}
+
 /********************
 screenshot
 ********************/
